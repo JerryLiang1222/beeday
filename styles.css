@@ -76,6 +76,10 @@ a:hover {
   text-decoration: none;
 }
 
+.nav-links a[aria-current="page"] {
+  color: var(--text);
+}
+
 main {
   width: min(100% - 32px, 920px);
   margin: 54px auto 80px;
@@ -136,11 +140,17 @@ h1 {
   background: rgba(255, 255, 255, 0.76);
   color: var(--text);
   text-decoration: none;
+  transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
 }
 
 .card:hover {
   border-color: #b8caae;
   transform: translateY(-2px);
+}
+
+.card-featured {
+  grid-column: 1 / -1;
+  background: var(--accent-soft);
 }
 
 .card h2 {
@@ -192,6 +202,71 @@ h1 {
 
 .policy-section + .policy-section {
   margin-top: 54px;
+  border-top: 1px solid var(--border);
+}
+
+.support-contact {
+  display: flex;
+  margin: 32px 0 0;
+  padding: 22px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--accent-soft);
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.support-contact h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.support-contact p {
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+
+.contact-button {
+  display: inline-flex;
+  flex: 0 0 auto;
+  min-height: 44px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: var(--accent);
+  color: #fff;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.contact-button:hover {
+  background: #3f6b34;
+}
+
+.faq-section > h2:first-child {
+  margin-top: 0;
+}
+
+.faq-item {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.faq-item h3 {
+  margin: 0;
+  font-size: 19px;
+}
+
+.faq-item p {
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+
+.support-updated {
+  margin-top: 42px;
+  padding-top: 24px;
   border-top: 1px solid var(--border);
 }
 
@@ -250,11 +325,11 @@ tr:last-child td {
   }
 
   .nav-links {
-    gap: 12px;
+    gap: 10px;
   }
 
   .nav-links a {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   main {
@@ -268,6 +343,15 @@ tr:last-child td {
   .hero,
   .document {
     border-radius: 22px;
+  }
+
+  .support-contact {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .contact-button {
+    justify-content: center;
   }
 
   table {

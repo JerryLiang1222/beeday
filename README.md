@@ -1,7 +1,8 @@
-# BeeDay Legal
+# BeeDay Support & Legal
 
-Public legal pages for BeeDay / 小蜜日子.
+Public technical support and legal pages for BeeDay / 小蜜日子.
 
+- [Technical Support](https://jerryliang1222.github.io/beeday/support.html)
 - [Privacy Policy](https://jerryliang1222.github.io/beeday/privacy.html)
 - [Terms of Service](https://jerryliang1222.github.io/beeday/terms.html)
 
